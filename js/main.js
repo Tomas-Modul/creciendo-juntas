@@ -70,40 +70,6 @@ const observer = new IntersectionObserver((entries) => {
 
 counters.forEach(counter => observer.observe(counter));
 
-// Formulario de contacto
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Enviando...';
-    submitBtn.disabled = true;
-    
-    try {
-        const formData = new FormData(contactForm);
-        const response = await fetch('php/send_email.php', {
-            method: 'POST',
-            body: formData
-        });
-        
-        const data = await response.json();
-        
-        if (data.status === 'success') {
-            alert(data.message);
-            contactForm.reset();
-        } else {
-            throw new Error(data.message);
-        }
-    } catch (error) {
-        alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
-        console.error('Error:', error);
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
-
 // Animación para las tarjetas de talleres
 const tallerCards = document.querySelectorAll('.taller-card');
 tallerCards.forEach(card => {
