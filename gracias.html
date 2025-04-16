@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! - Creciendo Juntas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .gracias-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(139, 95, 191, 0.8), rgba(215, 161, 249, 0.8));
+            color: white;
+            padding: 2rem;
+        }
+
+        .gracias-content {
+            max-width: 600px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .gracias-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gracias-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .volver-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .volver-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <section class="gracias-section">
+        <div class="gracias-content">
+            <img src="assets/logo-creciendo-juntas.png" alt="Creciendo Juntas Logo" style="height: 100px; margin-bottom: 2rem;">
+            <h1>¡Gracias por tu mensaje!</h1>
+            <p>Hemos recibido tu mensaje correctamente. Nos pondremos en contacto contigo lo antes posible.</p>
+            <a href="index.html" class="volver-btn">Volver a la página principal</a>
+        </div>
+    </section>
+</body>
+</html> 
